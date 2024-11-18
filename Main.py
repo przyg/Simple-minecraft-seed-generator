@@ -37,7 +37,7 @@ def onButtonClick():
                 for i, seed in enumerate(seeds):
                     progress["value"] = i + 1
                     root.update_idletasks()
-                    file.write(f"{seed}\n")
+                    file.write(f"Seed number #{i + 1}: {seed}\n")
             print(f"Seeds saved to {filename}")
         else:
             messagebox.showerror("Value Error", f"{nos} is not a valid number! Code: 2")
