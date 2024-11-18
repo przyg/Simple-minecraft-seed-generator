@@ -1,2 +1,2 @@
-# Seed-Generator
+# Seed Generator
  A simple seed generator
