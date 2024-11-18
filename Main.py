@@ -32,6 +32,7 @@ def onButtonClick():
         filename = "Seeds " + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
         if nos == 144:
             messagebox.showwarning("yay", "You found my favorite number! Code: 144")
+
         if nos > 0:
             with open(filename, "w") as file:
                 for i, seed in enumerate(seeds):
@@ -41,6 +42,7 @@ def onButtonClick():
             print(f"Seeds saved to {filename}")
         else:
             messagebox.showerror("Value Error", f"{nos} is not a valid number! Code: 2")
+            return
         if nos == 1:
             if messagebox.showinfo("Success", f"Seed generated and saved to: {filename}, Seed: {seeds} Code: -1"):
                 progress["value"] = 0
@@ -56,6 +58,7 @@ def onButtonClick():
     except ValueError:
         print("enter a valid number")
         messagebox.showerror("Value Error", f"Please enter a valid number! {nos} is not a valid number! Code: 1")
+        return
 
 
 button = tk.Button(root, text="Generate", command=onButtonClick)
