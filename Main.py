@@ -30,7 +30,8 @@ def onButtonClick():
 
         print(seeds)
         filename = "Seeds " + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
-
+        if nos == 144:
+            messagebox.showwarning("yay", "You found my favorite number! Code: 144")
         if nos > 0:
             with open(filename, "w") as file:
                 for i, seed in enumerate(seeds):
